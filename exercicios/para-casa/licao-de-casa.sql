@@ -9,13 +9,21 @@ CREATE TABLE estoque(
   );
 
 -- Obter a quantidade disponível em estoque para um determinado livro.
---NOTA ALUNA: foi criada uma consulta que retorna uma na exibição o título do livro, a quantidade total daquele livro em estoque (somando todas as entradas), e quantas entradas no estoque  aquele livro teve
+--NOTA ALUNA: foi criada uma consulta que retorna uma exibição o título do livro, a quantidade total daquele livro em estoque (somando todas quantidades), e quantas entradas no estoque  aquele livro teve
 
 SELECT livros.titulo,
-estoque.quantidade, COUNT(*) AS entradas_no_estoque
+SUM(estoque.quantidade), COUNT(*) AS entradas_no_estoque
 FROM estoque
 JOIN livros ON livros.id = estoque.livro_id
 WHERE livro_id = 2
+
+--Adicionalmente incrementei também a possibilidade de uma consulta da quantidade geral no estoque, para cada livro, organizando por quantidade de livro do maior para o menor)
+
+SELECT livros.titulo,
+SUM(estoque.quantidade), COUNT(*) AS entradas_no_estoque
+FROM estoque
+JOIN livros ON livros.id = estoque.livro_id
+GROUP BY titulo
 
 -- Adicionar unidades ao estoque de um livro específico:
 
