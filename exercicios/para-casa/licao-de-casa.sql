@@ -1,5 +1,4 @@
 -- create table livros
-
 CREATE TABLE livros (
     id INTEGER PRIMARY KEY NOT NULL AUTO_INCREMENT,
     titulo TEXT,
