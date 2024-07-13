@@ -10,7 +10,10 @@ CREATE TABLE Estoque ( 
 
 INSERT INTO Estoque (livros_id, quantidade) VALUES (1, 5);
 INSERT INTO Estoque (livros_id, quantidade) VALUES (2, 2);
-INSERT INTO Estoque (livros_id, quantidade) VALUES (3, 1);INSERT INTO Estoque (livros_id, quantidade) VALUES (4, 3);INSERT INTO Estoque (livros_id, quantidade) VALUES (5, 2);INSERT INTO Estoque (livros_id, quantidade) VALUES (6, 1);
+INSERT INTO Estoque (livros_id, quantidade) VALUES (3, 1);
+INSERT INTO Estoque (livros_id, quantidade) VALUES (4, 3);
+INSERT INTO Estoque (livros_id, quantidade) VALUES (5, 2);
+INSERT INTO Estoque (livros_id, quantidade) VALUES (6, 1);
 
 -- 2) Obter a quantidade disponível em estoque para um determinado livro.
 
