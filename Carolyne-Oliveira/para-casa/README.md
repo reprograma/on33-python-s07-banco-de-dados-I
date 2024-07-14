@@ -6,7 +6,7 @@ Exercicio da semana 07 para casa. Imagine que você está desenvolvendo um siste
 
 ## 📋 Passo a Passo
 
-# Criar uma tabela chamada estoque.
+## Criar uma tabela chamada estoque.
 
             CREATE TABLE estoque (
                 id INTEGER PRIMARY KEY,
@@ -14,7 +14,7 @@ Exercicio da semana 07 para casa. Imagine que você está desenvolvendo um siste
                 estoque INTEGER
             );
 
-# Inserir alguns registros de exemplo na tabela 'estoque'.
+## Inserir alguns registros de exemplo na tabela 'estoque'.
 
             INSERT INTO estoque (id_livro, estoque) VALUES (1, 40);
             INSERT INTO estoque (id_livro, estoque) VALUES (2, 20);
@@ -23,7 +23,7 @@ Exercicio da semana 07 para casa. Imagine que você está desenvolvendo um siste
             INSERT INTO estoque (id_livro, estoque) VALUES (5, 15); 
             INSERT INTO estoque (id_livro, estoque) VALUES (6, 22); 
 
-# Escrever consultas SQL para as operações especificadas:
+## Escrever consultas SQL para as operações especificadas:
 
 ## Obter a quantidade disponível em estoque para um determinado livro.
 
@@ -37,7 +37,7 @@ Exercicio da semana 07 para casa. Imagine que você está desenvolvendo um siste
             SET estoque = 33 
             WHERE id = 3;  
 
-## Ou	
+## Ou:
 
             UPDATE estoque 
             SET estoque = +1, id_livro = 2 
@@ -61,7 +61,7 @@ Exercicio da semana 07 para casa. Imagine que você está desenvolvendo um siste
             join livros ON livros.id = estoque.id
             WHERE id_livro = 2;
 
-# 👩🏻‍🏫 Profa. Leticia
+## 👩🏻‍🏫 Profa. Leticia!
 Professora [Leticia](https://davinyleticia.bio/)
 
-## 🔚   
+## 🔚
