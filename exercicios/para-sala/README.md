@@ -174,12 +174,12 @@ Escreva consultas SQL para realizar as seguintes operações:
 
 ```sql
 -- Criar a tabela 'votos'
-CREATE TABLE votos (
-    id INTEGER PRIMARY KEY,
-    id_usuario INTEGER,
-    id_livro INTEGER,
-    data_voto DATETIME
-);
+    CREATE TABLE votos (
+        id INTEGER PRIMARY KEY,
+        id_usuario INTEGER,
+        id_livro INTEGER,
+        data_voto DATETIME
+    );
 
 -- Inserir alguns registros de exemplo na tabela 'votos'
 INSERT INTO votos (id_usuario, id_livro, data_voto) VALUES (1, 1, '2024-05-10 08:30:00');  -- Voto do usuário 1 para o livro 1
