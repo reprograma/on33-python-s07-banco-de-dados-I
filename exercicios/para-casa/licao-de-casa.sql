@@ -34,8 +34,6 @@ INSERT INTO estoque (livro_id, quantidade) VALUES (1, 13),
 (3, 15),
 (2, 22);
 
-select * from estoque
-
 -- 1) Obter a quantidade disponível em estoque para um determinado livro.
 SELECT livro_id, livros.titulo, estoque.quantidade  --seleciona 
 FROM estoque --de onde
