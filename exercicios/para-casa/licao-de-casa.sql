@@ -28,9 +28,14 @@ where livro_id = 1; -- escolhe o livro que quer nesse caso e 1
 
 
 
+
 -- Adicionar unidades ao estoque de um livro específico.
 UPDATE estoque 
 set quantidade = quantidade + 2  -- adiciona mais 2 ao estoque
-where id = 1;  -- substituir 
+where livro_id = 1;  -- substituir 
 
 
+-- Atualizar unidades(quantidade) do estoque de um livro específico.
+UPDATE estoque
+SET quantidade = quantidade - 15 -- Define a nova quantidade como 15
+WHERE livro_id = 1; -- Substitua 1 pelo ID do livro e 15 pela nova quantidade
