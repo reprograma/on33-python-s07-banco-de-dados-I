@@ -35,17 +35,20 @@ INSERT INTO estoque (livro_id, quantidade) VALUES (1, 13),
 (2, 22);
 
 -- 1) Obter a quantidade disponível em estoque para um determinado livro.
-SELECT livro_id, livros.titulo, estoque.quantidade  --seleciona 
+SELECT livro_id, livros.titulo, SUM(estoque.quantidade)  --seleciona e já soma possíveis lançamentos de livros duplicados
 FROM estoque --de onde
-JOIN livros ON estoque.livro_id = livros.id
-order by livro_id asc; --referencia tabelas relacionadas
+JOIN livros ON estoque.livro_id = livros.id --referencia tabelas relacionadas
+WHERE livro_id = 2; -- livro específico
 
--- 2) Adicionar unidades(quantidade) ao estoque de um livro específico.
-UPDATE estoque --modifica um dado da tabela
-SET quantidade = quantidade + 2 -- o que quero modificar (soma)
-WHERE livro_id = 4; -- critério
+-- 2) Adicionar unidades(quantidade) ao estoque de um livro específico. FORMA1
+INSERT INTO estoque (livro_id, quantidade) VALUES (4, 2);
+
+-- 2) Adicionar unidades(quantidade) ao estoque de um livro específico. FORMA2
+UPDATE estoque -- UPDATE modifica um dado da tabela
+SET quantidade = quantidade + 2 -- informação que quero modificar/adicionar um valor ao estoque.quantidade (soma)
+WHERE livro_id = 4; -- critério livro específico
 
 -- 3) Atualizar unidades(quantidade) do estoque de um livro específico.
-UPDATE estoque --modifica um dado da tabela
-SET quantidade = 2 -- o que quero modificar (substitui a informação)
+UPDATE estoque -- UPDATE modifica um dado da tabela
+SET quantidade = 12 -- informação que quero modificar (substitui a informação)
 WHERE livro_id = 2; -- critério
