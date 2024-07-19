@@ -27,13 +27,12 @@ FROM estoque
 WHERE livro_id = 2; 
 
 
-
-
-
 -- Adicionar unidades ao estoque de um livro específico.
+
 UPDATE estoque
-SET quantidade = 4
+SET quantidade = quantidade + 4  -- Adiciona 4 unidades ao estoque existente
 WHERE livro_id = 2;
+
 
 SELECT *
 FROM estoque;
