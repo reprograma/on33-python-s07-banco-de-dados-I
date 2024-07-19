@@ -29,16 +29,17 @@ INSERT INTO estoque (livro_id, quantidade) VALUES (04, 07);
 INSERT INTO estoque (livro_id, quantidade) VALUES (05, 05);
 INSERT INTO estoque (livro_id, quantidade) VALUES (06, 15);
 
-SELECT quantidade
+SELECT *
 FROM estoque
-JOIN livros 
-	ON livro_id = livros.id
+
+SELECT *
+FROM estoque
 WHERE livro_id = 02
 
 UPDATE estoque 
 SET quantidade = quantidade + 3
 WHERE livro_id = 02; 
 
-UPDATE estoque
-SET quantidade = 20
-WHERE livro_id = 02; 
+UPDATE estoque 
+SET quantidade = quantidade + 6
+WHERE livro_id = 03; 
